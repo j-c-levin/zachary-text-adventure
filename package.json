@@ -1,0 +1,24 @@
+{
+  "name": "zachary-text-adventure",
+  "version": "1.0.0",
+  "description": "An experiment in learning typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-c-levin/zachary-text-adventure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-c-levin/zachary-text-adventure/issues"
+  },
+  "homepage": "https://github.com/j-c-levin/zachary-text-adventure#readme",
+  "dependencies": {
+    "@types/node": "^8.0.25"
+  }
+}
