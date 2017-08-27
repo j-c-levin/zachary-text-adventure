@@ -18,19 +18,30 @@ function askQuestion(question: string): Promise<string> {
 }
 
 async function main(): Promise<string> {
-    const name: string = await askQuestion("What is your name? ");
+    const name: string = await askQuestion("WHY Hello there, friend. What might your name be?");
 
-    let age: string | number = await askQuestion(`It's a pleasure to meet you ${name}, how old are you? `);
+    let gender: string = await askQuestion(`'Tis a pleasure to meet you ${name}. Now what is your gender (male/female)as I would hate to assume yours `);
+
+    // male Male MALE mAlE malE
+    if (gender.toLowerCase() === "male") {
+        gender = "Mr.";
+    } else if (gender.toLowerCase() === "female") {
+        gender = "Mrs.";
+    }
+
+    let age: string | number = await askQuestion(`Well it's a pleasure to meet you ${gender}${name}, and how old are you? `);
 
     age = Number(age);
 
-    if (age > 10) {
+    if (age > 15) {
         console.log("Wow, you are so old!");
-    } else {
+    } else if (age <= 15) {
         console.log("Wow, so young!");
+    } else {
+        console.log("stop messing around");
     }
-
     return name;
+
 }
 
 main();
